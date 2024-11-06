@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex:1;
+}
+.listing-div{
+    margin-top: 5rem !important;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:5rem;
+    background-color: #ebebeb !important;
+    z-index: 50;
+}
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.fa-compass{
+    color:#fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color:#222222 !important;
+}
+    /* Options */
+.options{
+    display : flex;
+    flex-direction: row;
+    justify-content:space-between;
+    position:fixed;
+    top:5rem;
+    width:100vw;
+    height:4rem;
+    background-color:white;
+    z-index: 999;
+}
+.option{
+    opacity: 0.7;
+    max-width: fit-content;
+    margin-top: 10px;
+}
+.option:hover{
+    opacity: 1;
+}
+.option > p {
+    font-size: 0.8rem;
+}
+.option > .img-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.option-img{
+    height:1.8rem;
+    width:1.8rem;
+}
+
+@media screen and (max-width : 1000px){
+    .navbar-collapse{
+        background-color: #ebebeb;
+        padding-left: 5rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        transition: all 1s ease-in;
+    }
+    .nav-link{
+        color: #070707 !important;
+        padding: 10px;
+        font-size: 18px;
+        padding: 1rem !important;
+        margin: 0 !important;
+    }
+    .listing-img{
+        height:15rem !important;
+    }
+}
+@media screen and (max-width : 765px){
+   
+    .options{
+        height:4rem;
+        overflow-x: scroll;
+    }
+    .option{
+        margin-right: 30px;
+    }
+    .option > p {
+        font-size: 0.7rem;
+    }
+    .option-img{
+        height:1.2rem;
+        width:1.2rem;
+    }
+    .listing-div{
+        display: grid !important;
+        grid-template-columns: 50% 50%;
+    }
+    .listing-img{
+        height:15rem !important;
+    }
+    .mobile-view{
+        width: 300px !important;
+        margin: auto !important;
+    }
+    .review-box{
+        width:90% !important;
+    }
+    .review-box-star{
+        font-size: 5px !important;
+    }
+}
+@media screen and (max-width : 560px){
+    .listing-div{
+        display:flex !important;
+        flex-direction: column !important;
+        max-width: 350px !important;
+        margin: auto !important;
+        margin-top: 5rem !important;
+    }
+    .listing-img{
+        height:10rem !important;
+    }
+}
+
+/*    footer     */
+.f-info-links a{
+    text-decoration: none;
+    color:#222222;
+    margin-right: 1rem;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+    color:#222222;
+}
+.f-info-links,.f-info-socials,.f-info-brand{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.f-info{
+    text-align: center;
+    height:8rem;
+    background-color: #ebebeb;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* cards */
+
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.index-img{
+    border-radius: 1rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding:0 !important;
+
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none ;
+}
+/* card-effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+/* new page */
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+/* edit page */
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+/* show page */
+.show-img{
+    height:30vh;
+    border-radius: 1rem !important;
+}
+.btn-body{
+    display: flex;
+}
+.delete-btn{
+    margin-left:2rem;
+}
+.success{
+    background-color: rgb(139, 231, 139) !important;
+}
+.failure{
+    background-color: #f4a4a9 !important;
+}

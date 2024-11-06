@@ -1,0 +1,92 @@
+<% layout("/layouts/boilerplate") %>
+   
+    <div class="options">
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/icons.webp" alt="" class="option-img">
+            </div>
+            <p>Icons</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/Trending.jpg" alt="" class="option-img">
+            </div>
+            <p>Trending</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/amazing views.jpg" alt="" class="option-img">
+            </div>
+            <p>Amazing Views</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/amazing pools.jpg" alt="" class="option-img">
+            </div>
+            <p>Amazing Pools</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/beach.jpg" alt="" class="option-img">
+            </div>
+            <p>Beach</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/beachpoint.jpg" alt="" class="option-img">
+            </div>
+            <p>Beachpoint</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/camping.jpg" alt="" class="option-img">
+            </div>
+            <p>Camping</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/farms.jpg" alt="" class="option-img">
+            </div>
+            <p>Farms</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/lakepoint.jpg" alt="" class="option-img">
+            </div>
+            <p>Lakepoint</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/rooms.jpg" alt="" class="option-img">
+            </div>
+            <p>Rooms</p>
+        </div>
+        <div class="option">
+            <div class="img-div">
+                <img src="assest/treehouse.jpg" alt="" class="option-img">
+            </div>
+            <p>Treehouse</p>
+        </div>
+    </div>
+
+    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 listing-div">
+
+        <% for( let listing of allListing){ %>
+            <a href="/listing/<%= listing._id %>" class="listing-link">
+                <div class="card col listing-card">
+                    <img src="<%= listing.image.url %>" class="card-img-top index-img listing-img" alt="listing_image"
+                        style="height: 20rem;">
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>
+                                <%= listing.title %>
+                            </b> <br>
+                            &#8377;<%= listing.price%>/night
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <% } %>
+    </div>
