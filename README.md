@@ -2,6 +2,9 @@
 
 This is a full-stack web application built using Node.js, Express, MongoDB, and EJS. It allows users to create, read, update, and delete listings for travel destinations, and includes features like user authentication, image uploads, and reviews.
 
+## Live Link :
+- https://wanderlust-qyat.onrender.com
+
 ## Features
 
 - **User Authentication:** Users can create accounts, login, and logout securely.
