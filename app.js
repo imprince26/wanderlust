@@ -1,5 +1,5 @@
-if(process.env.NODE_ENV != "production"){
-  require('dotenv').config();
+if (process.env.NODE_ENV != "production") {
+  require("dotenv").config();
 }
 const express = require("express");
 const app = express();
@@ -10,7 +10,7 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const flash = require("connect-flash");
 const session = require("express-session");
-const MongoStore = require('connect-mongo');
+const MongoStore = require("connect-mongo");
 const User = require("./models/user.js");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -26,7 +26,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(methodOverride("_method"));
 
-
 const dbUrl = process.env.ATLASDB_URL;
 main()
   .then(() => {
@@ -40,14 +39,14 @@ async function main() {
 }
 
 const store = MongoStore.create({
-  mongoUrl : dbUrl,
-  crypto : {
-    secret : process.env.SECRET,
-  }
-})
-store.on("error",() => {
-  console.log("ERROR in MONGO SESSION STORE",err);
-})
+  mongoUrl: dbUrl,
+  crypto: {
+    secret: process.env.SECRET,
+  },
+});
+store.on("error", () => {
+  console.log("ERROR in MONGO SESSION STORE", err);
+});
 const sessionOptions = {
   store,
   secret: process.env.SECRET,
@@ -75,9 +74,9 @@ app.use((req, res, next) => {
   res.locals.currUser = req.user;
   next();
 });
-app.get("/",(req,res) =>{
-  res.redirect("/listing")
-})
+app.get("/", (req, res) => {
+  res.redirect("/listing");
+});
 app.use("/listing", listingrouter);
 app.use("/listing/:id/reviews", reviewsrouter);
 app.use("/", userrouter);
