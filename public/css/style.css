@@ -16,8 +16,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    height:5rem;
-    background-color: #ebebeb !important;
+    height:4rem;
+    background-color:#fdf9f9 !important;
     z-index: 50;
 }
 .navbar-container{
@@ -38,7 +38,7 @@ body{
     flex-direction: row;
     justify-content:space-between;
     position:fixed;
-    top:5rem;
+    top:4rem;
     width:100vw;
     height:4rem;
     background-color:white;
@@ -67,7 +67,7 @@ body{
 
 @media screen and (max-width : 1000px){
     .navbar-collapse{
-        background-color: #ebebeb;
+        background-color:#fdf9f9 ;
         padding-left: 5rem;
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -117,7 +117,19 @@ body{
     .review-box-star{
         font-size: 5px !important;
     }
-}
+    .success{
+        margin-top: 4rem !important;
+        margin-right: 50rem !important;
+        width : 300px !important;
+        z-index: 758582;
+        
+    }
+    .failure{
+        margin-top: 4rem !important;
+        margin-right: 50rem !important;
+        width : 300px !important
+    } 
+} 
 @media screen and (max-width : 560px){
     .listing-div{
         display:flex !important;
@@ -129,6 +141,7 @@ body{
     .listing-img{
         height:10rem !important;
     }
+
 }
 
 /*    footer     */
@@ -213,7 +226,9 @@ body{
 }
 .success{
     background-color: rgb(139, 231, 139) !important;
+    margin-top: 5rem !important;
 }
 .failure{
     background-color: #f4a4a9 !important;
+    margin-top: 5rem !important;
 }
